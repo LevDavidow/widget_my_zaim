@@ -1,0 +1,152 @@
+.user-interaction-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 0 7px;
+  transition: box-shadow 0.22s ease-in, background-color 0.22s ease-in;
+}
+
+.no-touch .user-interaction-wrapper:hover {
+	background-color: #e8f8f5;
+}
+
+.user-interaction-wrapper_active {
+	box-shadow: inset 0 4px 4px rgba(13, 15, 19, 0.08), 0 0 18px rgba(13, 15, 19, 0.24);
+	background-color: #e8f8f5;
+}
+
+.user-interaction {
+	display: table;
+  width: 100%;
+}
+
+.user-interaction__cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.user-interaction__cell_btn,
+.user-interaction__cell_indicator {
+  width: 20px;
+  padding: 0 5px;
+}
+
+.user-interaction input:focus::-webkit-input-placeholder {color: transparent}
+.user-interaction input:focus::-moz-placeholder          {color: transparent}
+.user-interaction input:focus:-moz-placeholder           {color: transparent}
+.user-interaction input:focus:-ms-input-placeholder      {color: transparent}
+.user-interaction input:focus::placeholder      {color: transparent}
+
+.user-interaction_active {
+	overflow: hidden;
+}
+
+.user-interaction input {
+	padding: 15px 13px;
+	border: none;
+	outline: none;
+	line-height: 17px;
+	color: #878787;
+	width: 100%;
+  height: 49px;
+	background-color: transparent;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.user-interaction input::-webkit-input-placeholder {
+	color: #b7b4b4;
+	transition: color 0.22s linear;
+	will-change: color;
+}
+
+.user-interaction input::-moz-placeholder {
+	color: #b7b4b4;
+	transition: color 0.22s linear;
+	will-change: color;
+}
+
+.user-interaction input:-moz-placeholder {
+	color: #b7b4b4;
+	transition: color 0.22s linear;
+	will-change: color;
+}
+
+.user-interaction input:-ms-input-placeholder {
+	color: #b7b4b4;
+	transition: color 0.22s linear;
+	will-change: color;
+}
+
+.user-interaction input::placeholder {
+	color: #b7b4b4;
+	transition: color 0.22s linear;
+	will-change: color;
+}
+.user-interaction input::-ms-clear {
+  width : 0;
+  height: 0;
+  display: none;
+  visibility: hidden;
+}
+
+
+
+
+/*BUTTONS*/
+/*submit button*/
+.send-user-message-btn {
+	width: 25px;
+	height: 19px;
+	padding: 0;
+	margin: 0;
+	outline: none;
+	cursor: pointer;
+	transition: color 0.22s ease-in;
+	color: #d3d3d3;
+  overflow: visible;
+}
+
+.user-interaction__cell_btn .icon {
+	margin: 0;
+	padding: 0;
+}
+
+.send-user-message-btn .icon {
+	font-size: 20px;
+	line-height: 1;
+}
+
+.user-interaction-wrapper:hover .send-user-message-btn .icon,
+.user-interaction-wrapper_active .send-user-message-btn .icon {
+	color: #4bbca3;
+}
+
+.user-interaction-wrapper:hover .send-user-message-btn_disabled .icon,
+.user-interaction-wrapper_active .send-user-message-btn_disabled .icon {
+	color: #d3d3d3;
+  cursor: default;
+}
+
+/*cancel button*/
+.cancel-edit-btn {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('/static/img/icon_edit_input_base.svg');
+  cursor: pointer;
+  outline: none;
+}
+
+
+
+
+/*INDICATORS*/
+.validation-loader.loader {
+  width: 20px;
+  height: 20px;
+  background-size: 34px auto;
+}

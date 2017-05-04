@@ -1,0 +1,9 @@
+.calculator-controls {
+	text-align: center;
+}
+
+.calculator-controls__item {
+	width: 173px;
+	height: 36px;
+	margin: 4px;
+}

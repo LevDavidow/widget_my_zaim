@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'gutfinicons';
+  src: url('../font/gutfinicons.eot?77613606');
+  src: url('../font/gutfinicons.eot?77613606#iefix') format('embedded-opentype'),
+       url('../font/gutfinicons.woff2?77613606') format('woff2'),
+       url('../font/gutfinicons.woff?77613606') format('woff'),
+       url('../font/gutfinicons.ttf?77613606') format('truetype'),
+       url('../font/gutfinicons.svg?77613606#gutfinicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'gutfinicons';
+    src: url('../font/gutfinicons.svg?77613606#gutfinicons') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "gutfinicons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-toggle-size:before { content: '\2f'; } /* '/' */
+.icon-checkbox-checked:before { content: '\76'; } /* 'v' */
+.icon-close:before { content: '\78'; } /* 'x' */
+.icon-university:before { content: '\0434'; } /* 'д' */
+.icon-tools-icon:before { content: '\e800'; } /* '' */
+.icon-twitter:before { content: '\e801'; } /* '' */
+.icon-pensil:before { content: '\e802'; } /* '' */
+.icon-vk:before { content: '\e804'; } /* '' */
+.icon-wallet:before { content: '\e805'; } /* '' */
+.icon-work-icon_white:before { content: '\e807'; } /* '' */
+.icon-export_white:before { content: '\e80d'; } /* '' */
+.icon-facebook:before { content: '\e80e'; } /* '' */
+.icon-ok:before { content: '\e80f'; } /* '' */
+.icon-radio-selected:before { content: '\e810'; } /* '' */
+.icon-rub:before { content: '\e811'; } /* '' */
+.icon-compas:before { content: '\e812'; } /* '' */
+.icon-send-message:before { content: '\e813'; } /* '' */
+.icon-activate:before { content: '\e816'; } /* '' */
+.icon-credit-card_white:before { content: '\e817'; } /* '' */

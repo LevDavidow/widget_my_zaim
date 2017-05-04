@@ -1,0 +1,10 @@
+.screen {
+	position: relative;
+	min-height: calc(100% - 100px);
+	padding: 10px;
+  	padding-top: 0;
+}
+
+.screen > div:first-child {
+  padding-top: 25px;
+}

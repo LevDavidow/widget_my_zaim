@@ -1,0 +1,162 @@
+.iframe {
+	position: relative;
+	width: 100%;
+}
+
+#app, .index, .widget {
+	height: 100%;
+	max-height: 100%;
+}
+
+.widget {
+	overflow: hidden;
+	position: relative;
+	background-color: white;
+	color: black;
+	border-radius: 5px;
+}
+
+.widget__header,
+.widget__footer {
+	position: relative;
+	width: 100%;
+	z-index: 10000;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.widget__header {
+	display: table;
+	height: 50px;
+	padding-top: 6px;
+	vertical-align: top;
+	background-color: white;
+}
+
+.widget-title {
+	display: table-cell;
+	padding: 8px 0 8px 10px;
+	margin: 0;
+	font-weight: normal;
+	max-width: 200px;
+	line-height: 17px;
+	color: #449fec;
+  overflow: hidden;
+}
+
+.widget-title svg {
+	overflow: visible;
+	height: 17px;
+	width: 70%;
+	dominant-baseline: top;
+}
+.widget-title svg text {
+	dominant-baseline: top;
+}
+.widget-title .gradient-from {
+	stop-color: #359fce;
+}
+
+.widget-title .gradient-to {
+	stop-color: #57ca8d;
+}
+
+.widget-title text { 
+	/*font-weight: 600;*/
+	font-family: 'MyriadProSemiBold';
+	font-size: 17px;
+	line-height: 17px;
+}
+
+.header-controls {
+	display: table-cell;
+	min-width: 45px;
+	vertical-align: top;
+	padding: 11px 10px 8px 0;
+	background-color: white;
+	text-align: right;
+}
+
+.controls-list {
+	overflow: visible;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+	font-size: 0;
+	list-style: none;
+}
+
+.control-list-item {
+	display: block;
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+}
+
+.control-item {
+	display: block;
+	position: relative;
+	height: 13px;
+	width: 13px;
+	line-height: 13px;
+	padding: 0;
+	margin: 0 18px 0 0;
+	background: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	color: #359fce;
+	transition: color 0.22s ease-in;
+}
+.no-touch .control-item:hover,
+.control-item:active {
+	color: #50c29a;
+	cursor: pointer;
+}
+
+.control-item .icon {
+	margin: 0;
+	font-size: 13px;
+}
+
+.control-list-item:last-child .control-item {
+	margin-right: 0;
+}
+
+.user-interaction-container {
+  position: absolute;
+  bottom: 0;
+  /*z-index: 2;*/
+}
+
+/* body */
+.widget__body {
+	position: relative;
+	overflow-x: hidden;
+	height: 400px;
+	height: calc(100% - 50px);
+	background-color: #fff;
+}
+
+.widget_has-input .widget__body {
+	height: calc(100% - 100px);
+}
+
+.widget__body {
+
+}
+
+.user-interaction-container + .widget__body {
+  height: calc(100% - 100px);
+}
+
+.component__item {
+	margin: 10px 0;
+	padding: 0 10px;
+}
+
+/* footer */
+.widget__footer {
+	
+	border-bottom: none;
+}

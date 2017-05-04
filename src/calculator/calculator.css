@@ -1,0 +1,28 @@
+.calculator {
+	margin: 0;
+	padding: 0;
+}
+
+.calculator__section {
+	margin-bottom: 31px;
+}
+
+.calculator__section:last-child {
+	margin-bottom: 0;
+}
+
+.loan-period-wrapper {
+	margin-bottom: 27px;
+}
+
+.loan-types-wrapper {
+	margin-bottom: 21px;
+}
+
+.loan-slider-wrapper {
+	margin-bottom: 65px;
+}
+
+.loan-controls-wrapper {
+	text-align: center;
+}

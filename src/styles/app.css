@@ -1,0 +1,489 @@
+/*body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #fff;
+  background: #222;
+}
+
+* {
+	appearance: none;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+html, body {height:100%; overflow:hidden}*/
+body {overflow:auto; -webkit-overflow-scrolling:touch}
+
+.reset-btn-style {
+	border: none;
+	background-color: transparent;
+}
+
+.custom-item-wrapper {
+	margin: 10px 0;
+}
+
+.text-color_orange {
+	color: #f26330;
+}
+
+.margin_top_35 {
+	margin-top: 35px;
+}
+
+.margin_top_20 {
+	margin-top: 20px;
+}
+
+.margin_bottom_20 {
+	margin-bottom: 20px;
+}
+
+.margin_bottom_16 {
+	margin-bottom: 16px;
+}
+
+.loader {
+  display: inline-block;
+  background-color: transparent;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('/static/ignore/gears-gif-preloader-2.gif');  
+}
+
+// custom input checkbox
+.custom-checkbox-input {
+	display: none;
+}
+
+.custom-checkbox-label {
+	position: relative;
+	display: inline-block;
+	color: #777;
+	font-family: Roboto;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 20px;
+	cursor: pointer;
+}
+
+.custom-checkbox-label::before {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 18px;
+	height: 18px;
+	top: 0;
+	left: -35px;
+	background-color: #e8f8f5;
+	border: 1px solid #47b6ac;
+	border-radius: 2px;
+	background-position: center;
+	background-size: 14px 12px;
+	background-repeat: no-repeat;
+}
+
+.custom-checkbox-input:checked + .custom-checkbox-label::before {
+	background-image: url("/static/ignore/checkbox-checked.svg");
+}
+
+// custom-input-radio
+.custom-radio-input {
+	display: none;
+}
+
+.custom-radio-label {
+	position: relative;
+	display: inline-block;
+	color: #777;
+	font-family: Roboto;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 20px;
+	cursor: pointer;
+}
+
+.custom-radio-label::before {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 18px;
+	height: 18px;
+	top: 0;
+	left: -35px;
+	background-color: #e8f8f5;
+	border: 1px solid #47b6ac;
+	border-radius: 50%;
+	background-position: center;
+	background-size: 10px 10px;
+	background-repeat: no-repeat;
+}
+
+.custom-radio-input:checked + .custom-radio-label::before {
+	background-image: url("/static/ignore/radio-selected.svg");
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+.single-gradient {
+	overflow: hidden;
+	position: relative;
+	z-index: 0;
+	transition: all 0.15s ease-in;
+	background-color: transparent;
+}
+
+.single-gradient:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 1px;
+	z-index: -1;
+	width: 102%;
+	height: 100%;
+	left: 0px;
+	transition: transform 0.22s linear, opacity 0.22s ease-in;
+	background-color: #398acf;
+	// transform: translate(-100%);
+	opacity: 0;
+	background-image: linear-gradient(to right, #41afb7 0%, #41afb7 2%, #57ca8d 100%);
+}
+.single-gradient_show,
+.single-gradient_show .single-gradient {
+	color: #ffffff;
+}
+.single-gradient_show:after,
+.single-gradient_show .single-gradient:after {
+	transform: none;
+	opacity: 1	
+}
+
+.icon {
+	font-family: "gutfinicons";
+	user-select: none;
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: inherit;
+  margin-right: 1em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* chat */
+.chat-list {
+	position: relative;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.chat-item {
+	position: relative;
+	display: table;
+	width: 100%;
+	margin: 0 0 20px 0;
+	padding: 0;
+	list-style: none;
+}
+
+.chat-item .chat-item__component:last-child {
+	padding-left: 10px;
+}
+
+.avatar-wrapper,
+.message-wrapper {
+	display: table-cell;
+	margin: 0;
+}
+
+.avatar-wrapper {
+	width: 53px;
+	height: 53px;
+}
+
+.avatar {
+	width: 53px;
+	height: 53px;
+	margin-top: -4px;
+}
+
+.avatar-wrapper_rounded {
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.user-default-picture {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  line-height: 52px;
+  border-radius: 50%;
+  border: 1px solid #d8e7e4;
+  font-size: 16px;
+  font-weight: 400;  
+  vertical-align: middle;
+  text-align: center;
+  color: #359fce;
+  opacity: 0.5;
+}
+
+.message-wrapper {
+	position: relative;
+	padding: 0;
+	margin: 0;
+	vertical-align: top;
+}
+
+.message {
+	position: relative;
+	padding: 20px;
+	margin: 0;
+	background-color: #e8f8f5;
+	border-radius: 10px;
+	color: #777777;
+	font-family: Roboto;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;	
+}
+
+.message__item .message-description-wrapper {
+  padding: 0;
+  margin: 5px 0 0 0;
+}
+
+.breaked-text {
+  display: inline-block;
+  word-break: break-all;
+}
+
+
+.message_user {
+  padding: 13px 20px 12px; 
+}
+.message_no-radius_bottom-right {
+	border-bottom-right-radius: 0px;
+}
+
+.message_no-radius_bottom-left {
+	border-bottom-left-radius: 0px;
+}
+
+.chat-item_no-bg .message {
+	background-color: transparent;
+	border: 1px solid #d8e7e4;
+}
+
+.chat-item_invalid .message {
+  border: 1px solid #f54545;
+}
+
+.message__title {
+	font-weight: 500;
+	color: #f26330;
+}
+
+.message__item {
+	padding: 0;
+	margin: 0 0 30px 0;
+}
+
+.message__item > p {
+  margin: 0 0 10px 0;
+}
+
+.message__item p:last-child {
+	margin: 0;
+}
+
+.message__item:last-child {
+	margin: 0;
+}
+
+.message__item .message-text {
+  padding: 0;
+  margin: 0;
+  line-height: 20px;
+}
+
+.message-text {
+  white-space: pre-wrap;
+}
+
+.message-text_editing {
+  animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {  
+  50% { opacity: 0; }
+}  
+
+.edit-message-btn,
+.message-validation-state {
+  display: inline-block;
+	position: absolute;
+  right: 0;
+	top: 0;
+	border: none;
+	outline: none;
+	color: #359fce;
+  cursor: default;
+}
+
+.edit-message-btn {
+	width: 24px;
+	height: 24px;
+	background-color: white;
+  opacity: 1;
+  visibility: visible;
+	transition: color 0.22s ease-in;
+  cursor: pointer;
+  overflow: visible;
+}
+
+.widget:not(.widget_mobile) .edit-message-btn:hover,
+.edit-message-btn:active {
+	color: #50c29a;
+}
+
+.widget:not(.widget_mobile) .edit-message-btn_disabled:hover,
+.edit-message-btn_disabled,
+.edit-message-btn_disabled:active,
+.edit-message-btn_disabled:hover {
+  cursor: default;
+  color: #d3d3d3;
+}
+
+.edit-message-btn_disabled .icon {
+  cursor: default;
+}
+
+.edit-message-btn .icon {
+	display: block;
+	position: absolute;
+	top: -2px;
+	right: -2px;
+	margin: 0 auto;
+	font-size: 16px;
+}
+
+.message-validation-state {
+  width: 21px;
+  height: 21px;
+  top: -5px;
+  right: -5px;
+  border-radius: 50%;
+  line-height: 21px;
+  font-size: 10px;
+  font-weight: normal;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.message-validation-state_valid {
+  background-color: #6dd19c;
+}
+
+.chat-item_valid .message-validation-state_valid {
+  opacity: 0;
+  animation: valid-state 2s;
+}
+
+.message-validation-state_valid .icon,
+.message-validation-state_invalid .icon {
+  cursor: default;
+}
+
+.message-validation-state .icon {
+  line-height: 21px;
+}
+
+.chat-item_valid .edit-message-btn {
+  opacity: 1;
+  animation: hide-edit-btn 2s;
+}
+
+.message-validation-state_invalid {
+  background-color: #f54545;
+}
+
+.message-validation-state .icon {
+  margin: 0 auto;
+  color: white;
+}
+
+.message-content {
+  font-size: 14px;
+  line-height: 1;
+  color: #777777;
+  hyphens: auto;
+}
+
+.message-icon {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  vertical-align: middle;
+  margin: 4px 8px 4px 0;
+}
+
+.message-description {
+  display: inline;
+}
+
+.message-error {
+  padding: 11px;
+  color: #f54646;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 400;  
+}
+
+.chat-item__controls {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+}
+
+.message-loader {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: -7px;
+  right: -7px;
+  background-color: white;
+  background-position: top right;
+}
+
+.message-loader .loader {
+  width: 34px;
+  height: 34px;
+}
+
+@keyframes valid-state {
+  0%  {opacity: 1;}
+  99% {opacity: 1;}
+  100%  {opacity: 0;}
+}
+
+@keyframes hide-edit-btn {
+  0%  {opacity: 0;}
+  99% {opacity: 0;}
+  100%  { opacity: 1;}
+}

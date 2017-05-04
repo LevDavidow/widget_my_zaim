@@ -1,0 +1,32 @@
+.field-controls {
+	margin-top: 35px;
+  margin-bottom: 35px;
+	text-align: center;
+}
+
+.custom-button-wrapper {
+  display: inline-block;
+  position: relative;
+  margin: 0 4px 4px 4px;
+  padding: 0;
+  transform: translate3d(0,0,0);
+  /*cursor: pointer;*/
+}
+
+.custom-button-wrapper .custom-button,
+.custom-button-wrapper .custom-button_gradient {
+  display: inline-block;
+  /*cursor: pointer;*/
+  transform: translate3d(0,0,0);
+}
+
+.custom-button-wrapper .message-loader {
+  position: absolute;
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  top: 0;
+  right: -37px;
+  background-color: white;
+  background-position: top right;
+}

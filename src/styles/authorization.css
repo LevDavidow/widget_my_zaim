@@ -1,0 +1,26 @@
+.authorization {
+	text-align: center;
+}
+
+.authorization__devider {
+	position: relative;
+	display: block;
+	width: 160px;
+	height: 1px;
+	margin: 30px auto;
+	border-bottom: 1px solid #d2d2d2;
+}
+
+.authorization__devider-title {
+	position: relative;
+	display: inline-block;
+	top: -8px;
+	padding: 0 10px;
+	background-color: white;
+	color: #4e4e4e;
+	font-family: "Open Sans";
+	font-size: 11px;
+	font-weight: 400;
+	line-height: 1;
+	text-transform: uppercase;
+}

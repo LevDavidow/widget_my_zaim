@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'gutfinicons';
+  src: url('./Icons/font/gutfinicons.eot?43995258');
+  src: url('./Icons/font/gutfinicons.eot?43995258#iefix') format('embedded-opentype'),
+       url('./Icons/font/gutfinicons.woff?43995258') format('woff'),
+       url('./Icons/font/gutfinicons.ttf?43995258') format('truetype'),
+       url('./Icons/font/gutfinicons.svg?43995258#gutfinicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

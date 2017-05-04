@@ -1,0 +1,67 @@
+/* date-list */
+.date-list {
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+}
+
+.date__item {
+	float: left;
+	margin-right: 4px;
+	margin-bottom: 4px;
+}
+
+@media screen and (max-width: 325px) {
+  .date-list {
+    display: block;
+  }
+  .date__label {
+    display: inline-block;
+  }
+}
+
+.date__item:last-child {
+	margin-right: 0;
+}
+
+.date__label {
+	display: block;
+	position: relative;	
+	width: 73px;
+	height: 32px;	
+	border: 1px solid #e1dede;
+	border-radius: 16px;
+	background-color: #e8f8f5;
+	cursor: default;
+	color: #777;
+	font-family: Roboto;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 32px;	
+	text-align: center;
+	transition: all 0.22s linear;
+	-webkit-user-select: none; /* Chrome/Safari/Opera */
+	-khtml-user-select: none; /* Konqueror */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently	*/	
+}
+
+.date__item_active .date__label {
+  border: 1px solid transparent;
+}
+
+.single-gradient.date__label {
+	background-color: #e8f8f5;
+}
+
+.date__label:after {
+	border-radius: 18px;
+} 
+
+.date__item_disabled .date__label {
+	background-color: #f6f4f4;
+	cursor: default;
+	border: 1px solid #e1dede;
+	box-shadow: none;
+}

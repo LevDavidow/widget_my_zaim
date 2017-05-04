@@ -1,0 +1,25 @@
+.title {
+	padding: 0;
+	margin: 0 0 10px 0;
+	font-family: Roboto;
+	font-size: 14px;
+	line-height: 1;
+}
+
+.title__value {
+	color: #777;
+	font-weight: 500;
+}
+
+.title__ext {
+	font-weight: 700;	
+}
+
+.title_big {
+	line-height: 1;
+	vertical-align: middle;
+}
+
+.title_big .title__ext {
+	font-size: 24px;
+}
